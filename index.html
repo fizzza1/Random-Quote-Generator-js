@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator</title>
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #1a1a1a; /* Dark background */
+        color: #ffffff; /* Neon green text */
+        font-family: "Courier New", monospace; /* Hacker-style font */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      /* Container Styles */
+      .container {
+        background-color: #000; /* Black background */
+        padding: 30px 50px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.3); /* Neon green glow effect */
+        text-align: center;
+        width: 90%;
+        max-width: 600px;
+      }
+
+      /* Quote Style */
+      .quote {
+        font-size: 24px;
+        line-height: 1.6;
+        color: #ffffff; /* Neon green text */
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease-in-out;
+      }
+
+      .quote.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Button Styles */
+      .btn {
+        background-color: #111; /* Dark background */
+        color: #00ff00; /* Neon green */
+        border: 1px solid #00ff00; /* Neon green border */
+        padding: 12px 24px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+      }
+
+      .btn:hover {
+        background-color: #00ff00; /* Neon green */
+        color: #111; /* Dark background text */
+      }
+
+      .btn:focus {
+        outline: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="quote" id="quote-container">
+        <p id="quote-para">
+          "Never give up on a dream that you’ve been chasing almost your whole life."
+        </p>
+      </div>
+      <button class="btn" id="btn" onclick="changeQuote()">Generate Quote</button>
+    </div>
+
+  <script src="script.js"></script>
+  </body>
+</html>
